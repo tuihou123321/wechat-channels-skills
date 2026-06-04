@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频号博主信息"
+  short_description: "按博主名搜索视频号账号，并返回主页资料和账号信息。"
+  default_prompt: "查询视频号博主「佐老板聊AI」的主页信息"

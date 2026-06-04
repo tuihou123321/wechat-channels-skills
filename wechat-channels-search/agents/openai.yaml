@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频号搜索"
+  short_description: "按关键词搜索视频号内容，并整理标题作者时长等结果。"
+  default_prompt: "搜索视频号关键词「AI 知识库」"

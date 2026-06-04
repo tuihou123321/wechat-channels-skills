@@ -1,29 +1,41 @@
-# WeChat Channels Downloader Skill
+# WeChat Channels Skills
 
-Codex skill for downloading WeChat Channels videos by title through TikHub WeChat MCP.
+Codex skill package for common WeChat Channels workflows through TikHub WeChat MCP.
+
+## Included Skills
+
+- `wechat-channels-download`: download a specific video by title
+- `wechat-channels-search`: search videos by keyword
+- `wechat-channels-profile`: find creator/profile information by blogger name
 
 ## Install Prompt
 
-Send this to Codex after downloading the ZIP:
+Send this to Codex after downloading the ZIP or cloning the repo:
 
 ```text
-请帮我安装桌面上的 `wechat-channels-downloader-skill.zip` 这个 Codex skill，解压并放到当前系统 Codex 可识别的 skills 目录里。
+请帮我安装这个视频号 Codex skill 包，把里面的多个子 skill 都放到当前系统 Codex 可识别的 skills 目录里。
 
-这个 skill 需要配置 API 环境变量：`TIKHUB_WECHAT_MCP_TOKEN=这里填你的 TikHub Token`，可选环境变量：`TIKHUB_WECHAT_MCP_URL=https://mcp.tikhub.io/wechat/mcp`。
+这个 skill 包需要配置 API 环境变量：`TIKHUB_WECHAT_MCP_TOKEN=这里填你的 TikHub Token`，可选环境变量：`TIKHUB_WECHAT_MCP_URL=https://mcp.tikhub.io/wechat/mcp`。
 ```
 
-## Required Environment
+Codex can also run the bundled installer:
+
+```bash
+node install.js
+```
+
+## Requirements
 
 - Node.js
 - `curl`
 - A TikHub token with WeChat MCP access
 
-Optional: `ffprobe` for richer media validation.
+Optional: `ffprobe` for richer media validation when downloading.
 
-## Direct Usage
+## Direct Commands
 
 ```bash
-node scripts/download_wechat_channel_video.js "视频号标题"
+node wechat-channels-download/scripts/download_wechat_channel_video.js "视频号标题"
+node wechat-channels-search/scripts/search_wechat_channels.js "关键词"
+node wechat-channels-profile/scripts/fetch_wechat_channel_profile.js "博主名"
 ```
-
-The script saves videos to `~/Downloads` by default.

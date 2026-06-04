@@ -1,4 +1,4 @@
 interface:
   display_name: "视频号下载"
-  short_description: "按微信视频号标题搜索匹配视频并快速下载保存到本地。"
+  short_description: "按视频号标题搜索匹配内容，并快速下载视频文件保存到本地。"
   default_prompt: "下载标题为「Karpathy，LLM Wiki：把个人知识库变成会复利的系统」的视频号视频"
