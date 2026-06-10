@@ -4,6 +4,7 @@ Codex skill package for common WeChat Channels workflows through TikHub WeChat M
 
 ## Included Skills
 
+- `wechat-channels-copy-extract`: download and locally transcribe a video by title into Markdown copy
 - `wechat-channels-download`: download a specific video by title
 - `wechat-channels-search`: search videos by keyword
 - `wechat-channels-profile`: find creator/profile information by blogger name
@@ -30,11 +31,15 @@ node install.js
 - `curl`
 - A TikHub token with WeChat MCP access
 
-Optional: `ffprobe` for richer media validation when downloading.
+Optional:
+
+- `ffprobe` for richer media validation when downloading
+- `ffmpeg` and local `whisper` for `wechat-channels-copy-extract`
 
 ## Direct Commands
 
 ```bash
+node wechat-channels-copy-extract/scripts/extract_wechat_channels_copy.js "视频号标题"
 node wechat-channels-download/scripts/download_wechat_channel_video.js "视频号标题"
 node wechat-channels-search/scripts/search_wechat_channels.js "关键词"
 node wechat-channels-profile/scripts/fetch_wechat_channel_profile.js "博主名"

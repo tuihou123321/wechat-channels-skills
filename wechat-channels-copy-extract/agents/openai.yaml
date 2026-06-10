@@ -1,0 +1,3 @@
+display_name: 视频号文案提取
+short_description: 按视频号标题一键下载、转写并输出 Markdown 文案。
+default_prompt: 提取视频号标题为「」的文案

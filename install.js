@@ -6,6 +6,7 @@ const path = require("path");
 
 const repoRoot = __dirname;
 const skillNames = [
+  "wechat-channels-copy-extract",
   "wechat-channels-download",
   "wechat-channels-search",
   "wechat-channels-profile",
